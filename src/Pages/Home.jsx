@@ -1,7 +1,8 @@
-import React from 'react'
 import Header from '../Components/Header'
 import Cards from '../Components/Cards'
 import About from '../Components/About'
+import { useState } from 'react'
+import Navbar from '../Components/Navbar'
 
 const Home = () => {
   let headerData =[
@@ -13,7 +14,8 @@ const Home = () => {
 
   return (
     <>
-    <Header/>
+    <Navbar/>
+    <Header  headerCount={headerCount}/>
     <Cards/>
     <About/>
     </>
