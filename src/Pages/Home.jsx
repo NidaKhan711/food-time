@@ -15,7 +15,9 @@ const Home = () => {
   return (
     <>
     <Navbar/>
-    <Header  headerCount={headerCount}/>
+    <Header  headerCount={headerCount} 
+    headerData={headerData[headerCount]}
+    setHeaderCount={setHeaderCount}/>
     <Cards/>
     <About/>
     </>

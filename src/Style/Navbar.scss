@@ -1,38 +1,48 @@
-$header-color:#FDA5A8;
+$header-color: #FDA5A8;
 $secondary-color: #048243;
 $text-color: #6B0226;
-.background{
-    width: 90vw;
-    height: 90vh;
-    border-radius: 50px;
-    margin: 35px auto;
-    background-color: $header-color;
+
+.background {
+  width: 90vw;
+  height: 90vh;
+  border-radius: 50px;
+  margin: 35px auto;
+  background-color: $header-color;
+  animation: fadeIn 2s ease-in-out 1s forwards;
 }
+
 .navbar {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
+  gap: 105px;
   padding: 20px 30px;
   color: $text-color;
+
   .logo {
-    img{
+    img {
       width: 9rem;
       padding-bottom: 23px;
-   
+
     }
   }
+
   .nav-links {
     display: flex;
     gap: 40px;
     list-style: none;
+
+
     li {
-      a {
+
+      a{
         text-decoration: none;
         color: $text-color;
         font-size: 1.5rem;
         font-family: sans-serif;
         font-weight: 500;
         transition: color 0.5s ease;
+        cursor: pointer;
 
         &:hover {
           color: $secondary-color;
@@ -46,4 +56,5 @@ $text-color: #6B0226;
       width: 30px;
       height: 30px;
     }
-  }}
+  }
+}

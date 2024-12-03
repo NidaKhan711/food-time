@@ -4,6 +4,7 @@ import baskit from '../assets/baskit.png'
 import logo from '../assets/logo.png'
 
 const Navbar = () => {
+    
 
     return (
         <div className="background">
@@ -25,6 +26,8 @@ const Navbar = () => {
                 </ul>
                
             </nav>
+            
+            
         </div>
     );
 
