@@ -1,4 +1,4 @@
-$header-color: #FDA5A8;
+$header-color: #f6abad;
 $secondary-color: #048243;
 $text-color: #6B0226;
 
@@ -8,8 +8,6 @@ $text-color: #6B0226;
   border-radius: 50px;
   margin: 35px auto;
   background-color: $header-color;
-  animation: fadeIn 2s ease-in-out 1s forwards;
-}
 
 .navbar {
   display: flex;
@@ -26,12 +24,12 @@ $text-color: #6B0226;
 
     }
   }
-
-  .nav-links {
+  ul {
     display: flex;
+    justify-content: center;
     gap: 40px;
     list-style: none;
-
+    z-index: 2;
 
     li {
 
@@ -43,7 +41,6 @@ $text-color: #6B0226;
         font-weight: 500;
         transition: color 0.5s ease;
         cursor: pointer;
-
         &:hover {
           color: $secondary-color;
         }
@@ -57,4 +54,5 @@ $text-color: #6B0226;
       height: 30px;
     }
   }
+}
 }

@@ -35,7 +35,7 @@ const Cards = () => {
   }, []);
 
   return (
-    <div className="cards">
+    <div id='menu' className="cards">
       {Data.map((data) => {
         return (
           <div className="card" key={data.id}>

@@ -58,7 +58,9 @@ const Header = ({ headerCount, headerData, setHeaderCount }) => {
             className={headerCount === index ? "header-dot dot" : "header-dot"}
             src={btnImage}
             alt={`button-${index}`}
+            
           />
+          
         ))}
       </div>
     </div>

@@ -1,0 +1,38 @@
+$header-color: #FDA5A8;
+$secondary-color: #048243;
+$text-color: #6B0226;
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color:$header-color;
+  
+    .about-image {
+      flex: 1;
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  
+    .about-text {
+      flex: 1;
+      padding-left: 2rem;
+  
+      h2 {
+        font-size: 2rem;
+        color: $text-color;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: $text-color;
+      }
+    }
+  }
+  
