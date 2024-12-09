@@ -7,28 +7,28 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Cards = () => {
 
-  // Register ScrollTrigger plugin with GSAP
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animation for card elements
+   
     gsap.fromTo('.card', 
       {
-        y: 100,  // Initial position below
-        opacity: 0, // Initially hidden
+        y: 100,  
+        opacity: 0,
       }, 
       {
-        y: 0, // Final position (normal)
-        opacity: 1, // Fully visible
-        duration: 1.5, // Smooth and gradual animation duration
-        ease: 'power3.out', // Ease for smooth deceleration
-        stagger: 0.2, // Stagger the animation for each card (0.2s delay between cards)
+        y: 0, 
+        opacity: 1, 
+        duration: 1.5, 
+        ease: 'power3.out', 
+        stagger: 0.2,
         scrollTrigger: {
           trigger: '.cards',
-          start: 'top 80%', // Trigger when 80% of the cards section is in view
+          start: 'top 80%', 
           end: 'top 30%',
-          scrub: true, // Smooth scroll-based animation
-          markers: false, // Disable markers in production
+          scrub: true, 
+          markers: false,
         }
       }
     );

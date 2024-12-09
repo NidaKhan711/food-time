@@ -6,18 +6,18 @@ $text-color: #6B0226;
     align-items: center;
     justify-content: space-between;
     padding: 3rem;
+    margin: 78px 64px;
     background-color:$header-color;
-  
+    border-radius: 45px;
     .about-image {
       flex: 1;
       img {
         width: 100%;
         height: auto;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        box-shadow: 1px 4px 8px rgba(86, 2, 34, 0.735);
       }
     }
-  
     .about-text {
       flex: 1;
       padding-left: 2rem;
