@@ -1,0 +1,122 @@
+$header-color: #FDA5A8;
+$secondary-color: #048243;
+$text-color: #6B0226;
+
+#app {
+    height: 100%;
+  }
+
+  .pizza {
+    h1{
+      text-align: center;
+      color: $text-color;
+      font-size: 76px;
+      font-weight:bolder;
+   
+    }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    margin:54px 45px;
+  
+    &.swiper {
+      width: 86%;
+      height: 500px;
+    }
+  
+    .swiper-slide {
+     
+     display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .mains{
+        background-color: $header-color; 
+        border-radius: 10px; 
+        padding: 1.5rem; 
+        text-align: center; 
+        width: 90%; 
+        height: 300px;
+        position: relative; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+        img:first-of-type {
+          position: absolute; 
+          top: -95px;
+          left: 50%;
+          transform: translateX(-50%); 
+          width: 80%; 
+          height: auto; 
+          z-index: 4; 
+        }
+      
+        p {
+          font-size: 1rem; 
+          color:$text-color; 
+          margin-top: rem;
+          z-index: 2;
+         
+
+        }
+        .btc {
+          display: flex;               
+          justify-content: center;    
+          align-items: center;        
+          gap:160px;                   
+          margin-top: 82px;
+          margin-left: -80px;
+          position: relative;
+          right: 44;
+        
+          img {
+            width: 60px;            
+            height: 60px;             
+            object-fit: contain;     
+          }
+        
+          .del {
+            margin-top: 96px;           
+          }
+        
+          .para {
+            position: relative;
+            left: 154px;
+            bottom: 10px;
+            text-align: center;       
+            font-size: 24px;        
+            font-weight: bold;
+            z-index: 5;         
+          }
+          
+        }
+        .price{
+          margin-top: 12px;
+          color: #00371b;
+          font-size: 18px;
+          font-weight: 500;
+        }
+        
+        
+        &:hover {
+            transform: translateY(-8px); 
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
+          }
+    }
+    }
+  }
+}
+  .append-buttons {
+    text-align: center;
+    margin-top: 20px;
+    button {
+      display: inline-block;
+      cursor: pointer;
+      border: 1px solid $secondary-color;
+      color: $header-color;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin: 0 10px;
+      font-size: 13px;
+    }
+  }

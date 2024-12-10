@@ -1,5 +1,5 @@
 import '../Style/Cards.scss';
-import Data from '../assets/Data.js';
+import {Cardi} from '../assets/Data.js';
 import btn from '../assets/btn.png';
 import { useEffect } from 'react';
 import gsap from 'gsap';
@@ -36,11 +36,11 @@ const Cards = () => {
 
   return (
     <div id='menu' className="cards">
-      {Data.map((data) => {
+      {Cardi.map((Cardi) => {
         return (
-          <div className="card" key={data.id}>
-            <img src={data.Image} alt="img" />
-            <p>{data.discription}</p>
+          <div className="card" key={Cardi.id}>
+            <img src={Cardi.Image} alt="img" />
+            <p>{Cardi.discription}</p>
             <img src={btn} className="btn" alt="img" />
           </div>
         );

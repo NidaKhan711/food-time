@@ -3,6 +3,7 @@ import Cards from '../Components/Cards'
 import About from '../Components/About'
 import { useState } from 'react'
 import Navbar from '../Components/Navbar'
+import Menu from '../Components/Menu'
 
 const Home = () => {
   let headerData =[
@@ -20,6 +21,7 @@ const Home = () => {
     setHeaderCount={setHeaderCount}/>
     <Cards/>
     <About/>
+    <Menu/>
     </>
   )
 }
