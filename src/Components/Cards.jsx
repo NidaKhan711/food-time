@@ -3,6 +3,7 @@ import {Cardi} from '../assets/Data.js';
 import btn from '../assets/btn.png';
 import { useEffect } from 'react';
 import gsap from 'gsap';
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Cards = () => {
