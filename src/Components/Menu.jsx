@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Food } from '../assets/Data.js';
+import { burger } from '../assets/Data.js';
+import { sandi } from '../assets/Data.js';
 import Del from '../assets/del.png'
 import Add from '../assets/add.png'
 import 'swiper/css';
@@ -68,10 +70,10 @@ const Menu = () => {
                     className="mySwiper"
                 >
 
-                    {Food.map((item) => (
+                    {burger.map((item) => (
                         <SwiperSlide key={item.id}>
                             <div className="mains">
-                                <img src={item.Image} alt={`Food ${item.id}`} />
+                                <img src={item.Image} alt={`burger ${item.id}`} />
                                 <div className="btc">
                                     <img src={Add} className='del' alt="button" />
                                     <p className='para'>0</p>
@@ -104,10 +106,10 @@ const Menu = () => {
                     className="mySwiper"
                 >
 
-                    {Food.map((item) => (
+                    {sandi.map((item) => (
                         <SwiperSlide key={item.id}>
                             <div className="mains">
-                                <img src={item.Image} alt={`Food ${item.id}`} />
+                                <img src={item.Image} alt={`sandi ${item.id}`} />
                                 <div className="btc">
                                     <img src={Add} className='del' alt="button" />
                                     <p className='para'>0</p>

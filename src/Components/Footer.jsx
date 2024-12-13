@@ -33,18 +33,18 @@ const Footer = () => {
                     <h3>Follow Us</h3>
                     <div className="footer__social-icons">
                         <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faFacebook} style={{ color: '#E4405F', fontSize: '30px' }} />
+                            <FontAwesomeIcon icon={faFacebook} style={{ color: '#E4405F', fontSize: '30px' }} />
                         </a>
                         <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faTwitter} style={{ color: '#E4405F', fontSize: '30px' }} />
+                            <FontAwesomeIcon icon={faTwitter} style={{ color: '#E4405F', fontSize: '30px' }} />
 
                         </a>
                         <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} style={{ color: '#E4405F', fontSize: '30px' }} />
+                            <FontAwesomeIcon icon={faInstagram} style={{ color: '#E4405F', fontSize: '30px' }} />
 
                         </a>
                         <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faLinkedin} style={{ color: '#E4405F', fontSize: '30px' }} />
+                            <FontAwesomeIcon icon={faLinkedin} style={{ color: '#E4405F', fontSize: '30px' }} />
 
                         </a>
                     </div>
