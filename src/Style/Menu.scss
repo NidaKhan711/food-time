@@ -49,6 +49,9 @@ $text-color: #6B0226;
           height: 70%; 
           z-index: 4; 
         }
+        h2{
+          color: $text-color;
+        }
       
         p {
           font-size: 1rem; 
@@ -75,7 +78,7 @@ $text-color: #6B0226;
           }
         
           .del {
-            margin-top: 96px;           
+            margin-top: 94px;           
           }
         
           .para {
@@ -90,7 +93,7 @@ $text-color: #6B0226;
           
         }
         .price{
-          margin-top: 12px;
+          margin-top: 4px;
           color: #00371b;
           font-size: 18px;
           font-weight: 500;
@@ -105,18 +108,4 @@ $text-color: #6B0226;
     }
   }
 }
-  .append-buttons {
-    text-align: center;
-    margin-top: 20px;
-    button {
-      display: inline-block;
-      cursor: pointer;
-      border: 1px solid $secondary-color;
-      color: $header-color;
-      text-decoration: none;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin: 0 10px;
-      font-size: 13px;
-    }
-  }
+  

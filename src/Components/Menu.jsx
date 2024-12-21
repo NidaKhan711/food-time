@@ -1,131 +1,61 @@
-import React, { useState } from 'react';
-// Import Swiper React components
+import React, { useContext, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Food } from '../assets/Data.js';
-import { burger } from '../assets/Data.js';
-import { sandi } from '../assets/Data.js';
-import Del from '../assets/del.png'
-import Add from '../assets/add.png'
+import { Food, burger, sandi } from '../assets/Data.js';
+import Del from '../assets/del.png';
+import Add from '../assets/add.png';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../Style/Menu.scss';
-
 import { Pagination, Navigation } from 'swiper/modules';
+import {CartContext} from '../Context/ContProvide.jsx'
 
 const Menu = () => {
     const [swiperRef, setSwiperRef] = useState(null);
+    const {cartItems,getTotalCardAmount, addToCart, removeFromCart }=useContext(CartContext)
+    console.log(addToCart, removeFromCart, getTotalCardAmount);
+
+    const categories = [
+        { title: "Pizza", items: Food },
+        { title: "Burger", items: burger },
+        { title: "Sandwich", items: sandi },
+    ];
 
     return (
         <>
-
-
-            <div className="pizza">
-                <h1>Pizza</h1> 
-                <Swiper
-                    onSwiper={setSwiperRef}
-                    slidesPerView={3}
-                    centeredSlides={true}
-                    spaceBetween={30}
-                    pagination={{
-                        type: 'fraction',
-                    }}
-                    navigation={true}
-                    modules={[Pagination, Navigation]}
-                    className="mySwiper"
-                >
-
-                    {Food.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            <div className="mains">
-                                <img src={item.Image} alt={`Food ${item.id}`} />
-                                <div className="btc">
-                                    <img src={Add} className='del' alt="button" />
-                                    <p className='para'>0</p>
-                                    <img src={Del} alt="button" />
+            {categories.map((category) => (
+                <div className="pizza" key={category.title}>
+                    <h1>{category.title}</h1>
+                    <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={3}
+                        centeredSlides={true}
+                        spaceBetween={30}
+                        pagination={{ type: 'fraction' }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mySwiper"
+                    >
+                        {category.items.map((item) => (
+                            <SwiperSlide key={item.id}>
+                                <div className="mains">
+                                    <img src={item.Image} alt={`${category.category} ${item.id}`} />
+                                    <div className="btc">
+                                        <img onClick={()=>addToCart(item.id)} src={Add} className="del" alt="Add" />
+                                        <p className="para">{cartItems[item.id]||0}</p>
+                                        <img onClick={()=>removeFromCart(item.id)}  src={Del} alt="Remove" />
+                                    </div>
+                                    <h2>{item.name}</h2>
+                                    <p>{item.discription}</p>
+                                    <p className="price">Price: ${item.price}</p>
                                 </div>
-                                <p>{item.discription}</p>
+                            </SwiperSlide>
+                        ))}
 
-                                <p className="price">Price:${item.price}</p>
-
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper >
-            </div>
-
-
-            <div className="pizza">
-                <h1>Burger</h1> 
-                <Swiper
-                    onSwiper={setSwiperRef}
-                    slidesPerView={3}
-                    centeredSlides={true}
-                    spaceBetween={30}
-                    pagination={{
-                        type: 'fraction',
-                    }}
-                    navigation={true}
-                    modules={[Pagination, Navigation]}
-                    className="mySwiper"
-                >
-
-                    {burger.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            <div className="mains">
-                                <img src={item.Image} alt={`burger ${item.id}`} />
-                                <div className="btc">
-                                    <img src={Add} className='del' alt="button" />
-                                    <p className='para'>0</p>
-                                    <img src={Del} alt="button" />
-                                </div>
-                                <p>{item.discription}</p>
-
-                                <p className="price">Price:${item.price}</p>
-
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper >
-            </div>
-
-
-
-            <div className="pizza">
-                <h1>Sandwich</h1> 
-                <Swiper
-                    onSwiper={setSwiperRef}
-                    slidesPerView={3}
-                    centeredSlides={true}
-                    spaceBetween={30}
-                    pagination={{
-                        type: 'fraction',
-                    }}
-                    navigation={true}
-                    modules={[Pagination, Navigation]}
-                    className="mySwiper"
-                >
-
-                    {sandi.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            <div className="mains">
-                                <img src={item.Image} alt={`sandi ${item.id}`} />
-                                <div className="btc">
-                                    <img src={Add} className='del' alt="button" />
-                                    <p className='para'>0</p>
-                                    <img src={Del} alt="button" />
-                                </div>
-                                <p>{item.discription}</p>
-
-                                <p className="price">Price:${item.price}</p>
-
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper >
-            </div>
-
-         </>
+                    </Swiper>
+                </div>
+            ))}
+        </>
     );
 };
 
