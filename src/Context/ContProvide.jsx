@@ -7,37 +7,53 @@ export const CartContext = createContext();
 const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState({});
 
+    // Combine all data into one array
+    const allData = [...Food, ...burger, ...sandi]; // Static data from assets
+
     const addToCart = (itemId) => {
         if (!cartItems[itemId]) {
-          setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
+            setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
         } else {
-          setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+            setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
         }
-      };
-      const removeFromCart = (itemId) => {
+    };
+
+    const removeFromCart = (itemId) => {
         setCartItems((prev) => {
             if (prev[itemId] > 0) {
                 return { ...prev, [itemId]: prev[itemId] - 1 };
             }
-            return prev; 
+            return prev;
         });
     };
-      const getTotalCardAmount = () => {
-        let totalAmaount = 0;
-        const allData = [...Food, ...burger, ...sandi]; 
+
+    const getTotalCardAmount = () => {
+        let totalAmount = 0;
         for (const item in cartItems) {
-          if (cartItems[item] > 0) {
-            let itemInfo =allData.find((product) => product._id === item);
-            totalAmaount += itemInfo.price * cartItems[item];
-          }
+            if (cartItems[item] > 0) {
+                let itemInfo = allData.find((product) => product._id === item);
+                if (itemInfo) {
+                    totalAmount += itemInfo.price * cartItems[item];
+                }
+            }
         }
-        return totalAmaount;}
+        return totalAmount;
+    };
+
     return (
-        <CartContext.Provider value={{cartItems, addToCart,removeFromCart,getTotalCardAmount}}>
+        <CartContext.Provider
+            value={{
+                allData, // Provide allData in the context
+                cartItems,
+                addToCart,
+                removeFromCart,
+                getTotalCardAmount,
+            }}
+        >
             {children}
         </CartContext.Provider>
     );
 };
 
-
 export default CartProvider;
+

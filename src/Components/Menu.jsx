@@ -12,9 +12,8 @@ import {CartContext} from '../Context/ContProvide.jsx'
 
 const Menu = () => {
     const [swiperRef, setSwiperRef] = useState(null);
-    const {cartItems,getTotalCardAmount, addToCart, removeFromCart }=useContext(CartContext)
-    console.log(addToCart, removeFromCart, getTotalCardAmount);
-
+    const {cartItems,addToCart, removeFromCart }=useContext(CartContext)
+    
     const categories = [
         { title: "Pizza", items: Food },
         { title: "Burger", items: burger },

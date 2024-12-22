@@ -53,6 +53,15 @@ $text-color: #6B0226;
       width: 30px;
       height: 30px;
     }
+    .dot{
+      position: absolute;
+      min-width: 10px;
+      min-height: 10px;
+      background-color: $secondary-color;
+      border-radius: 5px;
+      top: -8px;
+      right: -8px;
+  }
   }
 }
 }
