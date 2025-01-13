@@ -27,7 +27,7 @@ const Navbar = () => {
                                 alt="Basket"
                             />
                         </Link>
-                        <div className={getTotalCardAmount() === 0 ? "" : "dot"}></div>
+                        <div className="dot"></div>
                     </div>
                 </ul>
 

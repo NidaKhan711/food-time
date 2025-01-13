@@ -4,7 +4,6 @@ import About from '../Components/About'
 import { useState } from 'react'
 import Navbar from '../Components/Navbar'
 import Menu from '../Components/Menu'
-import Footer from '../Components/Footer'
 
 const Home = () => {
   let headerData =[
