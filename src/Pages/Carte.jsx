@@ -6,6 +6,7 @@ import { CartContext } from '../Context/ContProvide'
 
 const Carte = () => {
     const {cartItems,removeFromCart,allData} = useContext(CartContext)
+    
 
     return (
         <div className="food-display">
@@ -29,10 +30,9 @@ const Carte = () => {
                 })
             }
 
-
-
         </div>
     );
 };
+
 
 export default Carte;
